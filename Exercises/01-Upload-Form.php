@@ -21,3 +21,30 @@
 </body>
 
 </html>
+
+<?php
+if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
+    $username = $_POST["username"];
+    $email = $_POST["email"];
+
+    $file_name = $_FILES["file"]["name"];
+    $file_tmp = $_FILES["file"]["tmp_name"];
+    $file_size = $_FILES["file"]["size"];
+    $file_error = $_FILES["file"]["error"];
+
+    if ($file_error === 0) {
+        $destination = $file_name;
+
+        if (move_uploaded_file($file_tmp, $destination)) {
+            echo "File uploaded sucessfully.<br>";
+            echo "Username: $username<br>";
+            echo "Email: $email<br>";
+            echo "File size: $file_size<br>";
+        } else {
+            echo "Error during file upload.<br>";
+        }
+    } else {
+        echo "Error occured: " . $file_error . "<br>";
+    }
+}
+?>
