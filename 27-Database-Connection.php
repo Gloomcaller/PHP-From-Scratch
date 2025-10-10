@@ -2,22 +2,16 @@
 $db_server = "localhost";
 $db_user = "root";
 $db_pass = "";
-$db_name = "sampDB";
-$conn = "";
+$db_name = "sample_database";
+$conn = null;
 
 try {
     $conn = mysqli_connect(
-        // $db_server,
-        // $db_user,
-        // $db_pass,
-        // $db_name,
-        // $conn
-        null,
-        null,
-        null,
-        null,
-        null
-        // Temp fix ^^^
+        $db_server,
+        $db_user,
+        $db_pass,
+        $db_name,
+        $conn
     );
 } catch (mysqli_sql_exception) {
     echo "Could not connect to the DB.";
