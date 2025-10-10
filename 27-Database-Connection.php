@@ -24,5 +24,5 @@ if ($conn) {
 
 <?php
 // connection in another file:
-// include("24-Database-Connection.php");
+// include("27-Database-Connection.php");
 ?>
