@@ -7,11 +7,17 @@ $conn = "";
 
 try {
     $conn = mysqli_connect(
-        $db_server,
-        $db_user,
-        $db_pass,
-        $db_name,
-        $conn
+        // $db_server,
+        // $db_user,
+        // $db_pass,
+        // $db_name,
+        // $conn
+        null,
+        null,
+        null,
+        null,
+        null
+        // Temp fix ^^^
     );
 } catch (mysqli_sql_exception) {
     echo "Could not connect to the DB.";
@@ -23,6 +29,6 @@ if ($conn) {
 ?>
 
 <?php
-// connection in aother file:
-include("24-Database-Connection.php");
+// connection in another file:
+// include("24-Database-Connection.php");
 ?>
