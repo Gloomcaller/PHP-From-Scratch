@@ -1,0 +1,2 @@
+This text was appended using a+ mode.
+This text was added using r+ mode.
