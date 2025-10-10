@@ -10,4 +10,4 @@ array_push($arr, 6);
 
 echo "<br>Array after the new element: ";
 print_r($arr);
-?>Associative Arrays
+?>
