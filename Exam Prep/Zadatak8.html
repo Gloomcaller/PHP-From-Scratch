@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 8</title>
+</head>
+
+<body>
+    <h2>Registration Form</h2>
+
+    <form method="POST" action="">
+        <label>Full Name:</label><br>
+        <input type="text" name="fullname" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Country:</label><br>
+        <select name="country" required>
+            <option value="">Select Country</option>
+            <option value="USA">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label>Interests:</label><br>
+        <input type="checkbox" name="interests[]" value="Sports"> Sports<br>
+        <input type="checkbox" name="interests[]" value="Music"> Music<br>
+        <input type="checkbox" name="interests[]" value="Reading"> Reading<br>
+        <input type="checkbox" name="interests[]" value="Travel"> Travel<br>
+        <input type="checkbox" name="interests[]" value="Technology"> Technology<br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female
+
+        <label>Comments:</label><br>
+        <textarea name="comments" rows="4" cols="40"></textarea><br><br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear Form">
+    </form>
+</body>
+
+</html>
